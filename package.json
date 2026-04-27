@@ -1,0 +1,40 @@
+{
+  "name": "@calx/selis-mcp",
+  "version": "0.2.2",
+  "description": "MCP server for Selis TMiS — manage PMO entities (actions, risks, issues, projects) from any MCP client",
+  "type": "module",
+  "bin": {
+    "selis-mcp": "./src/index.mjs",
+    "selis": "./src/cli.mjs"
+  },
+  "license": "SSPL-1.0",
+  "files": [
+    "src/",
+    "package.json",
+    "server.json"
+  ],
+  "mcpName": "app.selis.mcp/pmo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calx-sa/selis-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/calx-sa/selis-mcp/issues"
+  },
+  "homepage": "https://github.com/calx-sa/selis-mcp#readme",
+  "keywords": [
+    "selis",
+    "mcp",
+    "pmo",
+    "project-management",
+    "claude",
+    "model-context-protocol"
+  ],
+  "scripts": {
+    "start": "node src/index.mjs"
+  },
+  "dependencies": {
+    "enquirer": "^2.4.1",
+    "js-yaml": "^4.1.1"
+  }
+}

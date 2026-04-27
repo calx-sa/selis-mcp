@@ -1,0 +1,49 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "app.selis.mcp/pmo",
+  "title": "Selis MCP",
+  "description": "MCP server for Selis TMiS — manage PMO entities from any MCP client",
+  "version": "0.2.2",
+  "icon": "",
+  "categories": ["project-management", "productivity"],
+  "repository": {
+    "url": "https://github.com/calx-sa/selis-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@calx/selis-mcp",
+      "version": "0.2.2",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.selis.app/tmis/mcp"
+    },
+    {
+      "type": "sse",
+      "url": "https://mcp.selis.app/tmis/sse"
+    },
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.selis.dev/tmis/mcp"
+    },
+    {
+      "type": "sse",
+      "url": "https://mcp.selis.dev/tmis/sse"
+    }
+  ],
+  "command": "npx",
+  "args": ["-y", "@calx/selis-mcp"],
+  "env": {
+    "SELIS_ENV": "${SELIS_ENV:dev}",
+    "SELIS_ORG": "${SELIS_ORG:}",
+    "NODE_TLS_REJECT_UNAUTHORIZED": "0"
+  },
+  "runtime": "node"
+}
